@@ -1,38 +1,35 @@
-# Welcome to Remix!
+# Welcome to the Dexa coding interview
 
-- [Remix Docs](https://remix.run/docs)
+This is meant to be a collaborative "open book" exercise. Please use any apps, 
+tools, AI, etc that you would normally use while programming.
 
-## Development
+We have also included a few helpful services/tools to save you time. More 
+details below.
 
-From your terminal:
+## Task
 
-```sh
-npm run dev
-```
+Build a simple clone of [Perplexity](https://www.perplexity.ai/).
 
-This starts your app in development mode, rebuilding assets on file changes.
+When the user submits a new search, they should be presented with the search 
+results from Google, as well as an AI generated response to their query, based 
+on the retrieved Google search results.
 
-## Deployment
+## Setup
 
-First, build your app for production:
+1. Use npm to install dependencies
+2. Add required environment variables
+3. Run `npm run dev` to start the dev server
 
-```sh
-npm run build
-```
+## Documentation
 
-Then run the app in production mode:
+- Remix: https://remix.run/docs/en/2.3.1
+- Dexter (for OpenAI): https://github.com/dexaai/dexter/tree/master
+- SerpAPI (for Google search): https://github.com/serpapi/serpapi-javascript
 
-```sh
-npm start
-```
+## Services
 
-Now you'll need to pick a host to deploy it to.
+These are helpful services that we have already configured for you. Find the 
+code in `/app/services/`.
 
-### DIY
-
-If you're familiar with deploying node applications, the built-in Remix app server is production-ready.
-
-Make sure to deploy the output of `remix build`
-
-- `build/`
-- `public/build/`
+- OpenAI: use GPT 3.5
+- SerpAPI: get Google search results for a query

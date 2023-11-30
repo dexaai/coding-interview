@@ -1,5 +1,5 @@
 {
-  "name": "fe-interview",
+  "name": "coding-interview",
   "private": true,
   "sideEffects": false,
   "type": "module",
@@ -10,13 +10,17 @@
     "typecheck": "tsc"
   },
   "dependencies": {
+    "@dexaai/dexter": "^1.1.0",
     "@remix-run/css-bundle": "^2.3.0",
     "@remix-run/node": "^2.3.0",
     "@remix-run/react": "^2.3.0",
     "@remix-run/serve": "^2.3.0",
     "isbot": "^3.6.8",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "serpapi": "^2.0.0",
+    "zod": "^3.22.4",
+    "zodix": "^0.4.4"
   },
   "devDependencies": {
     "@remix-run/dev": "^2.3.0",
