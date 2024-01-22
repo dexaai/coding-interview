@@ -20,10 +20,15 @@ const chatModel = new ChatModel({
 });
 
 /** Summarize Google search results using the OpenAI API. */
-export async function summarizeSearchResults(args: {
+export async function summarizeSearchResults({ query, searchResults }: {
   query: string;
   searchResults: SearchResult[];
 }): Promise<string> {
-  // @TODO
-  return '';
+
+  const openAIPrompt = `Summarize the internet search results for: "${query}".
+   These are the results: 
+     * ${searchResults.map(r => r.snippet).join('\n  *')}`;
+  const result = await chatModel.run({ messages: [{ 'role': 'user', 'content': openAIPrompt }] });
+
+  return result.message.content ?? '';
 }
